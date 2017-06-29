@@ -290,6 +290,11 @@ a:hover {
     color: #fff;
 }
 
+.nav-step li.done .icon-step {
+    background-color: #7ed321;
+    color: #fff;
+}
+
 .nav-step li {
     width: 33.33333%;
     float: left;
@@ -306,6 +311,37 @@ a:hover {
     left: 0;
     z-index: 1;
 }
+.nav-step li.done:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #7ed321;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 1;
+}
+.nav-step li:last-child:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #F58E0B;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-step li.done + li:after{
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: #7ed321;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 2;
+}
 
 .nav-step li:first-child:after {
     content: '';
@@ -313,7 +349,7 @@ a:hover {
     height: 3px;
     background-color: #F58E0B;
     position: absolute;
-    top: 14px;
+    top: 15px;
     left: 0;
     z-index: 2;
 }
@@ -324,7 +360,7 @@ a:hover {
     height: 3px;
     background-color: #F58E0B;
     position: absolute;
-    top: 14px;
+    top: 15px;
     right: 0;
     z-index: 2;
 }
@@ -606,6 +642,31 @@ a.blue {
 .search-mobile {
     text-align: right;
 }
+.step-2 .radio label,.step-2 .sub-field .title {
+    padding-left: 0;
+}
+.step-3 .content {
+    text-align: center;
+    padding: 0 25%;
+    line-height: 26px;
+}
+.step-3 h2 {
+    color: #7ed321;
+    margin-bottom: 21px;
+}
+.step-3 .paynumber {
+    color: #f58e0b;
+    font-size: 18px;
+}
+.step-3 .content div {
+    border: solid 1px #F58E0B;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.step-3 .text-notify {
+    font-size: 14px;
+    color: #f58e0b;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .box-inline-block {
         border: 0 !important;
@@ -681,6 +742,9 @@ a.blue {
     .w100 {
         width: 122px;
     }
+    .step-3 .content {
+        padding: 0 20%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -711,6 +775,9 @@ a.blue {
     }
     .sub-field .detail-sub-field {
         margin-left: 31px;
+    }
+    .step-2 .sub-field .detail-sub-field {
+        margin-left: 0;
     }
     .w470 {
         width: 295px;
@@ -751,6 +818,9 @@ a.blue {
     }
     .bdb-doted > .sub-field > .title {
         padding-left: 31px!important;
+    }
+    .step-2 .bdb-doted > .sub-field > .title {
+        padding-left: 0!important;
     }
     label > .sub-field {
         width: 267px;
@@ -832,6 +902,15 @@ a.blue {
     }
     .row .col-xs-6:last-child {
         padding-left: 7px;
+    }
+    .mgr-xs-20 {
+        margin-right: 20px;
+    }
+    .mgb-xs-5 {
+        margin-bottom: 5px;
+    }
+    .step-3 .content {
+        padding: 0 5%;
     }
 }
 
