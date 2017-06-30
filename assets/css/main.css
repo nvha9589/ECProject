@@ -36,18 +36,18 @@ a:hover {
 }
 
 .icon {
-    background-image: url(../img/icon.png);
+    background-image: url(../img/icon/user.png);
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
     position: relative;
+    background-size: 100%;
 }
 
 .icon-login {
-    width: 16px;
-    height: 16px;
-    background-position: 0 0;
+    width: 14px;
+    height: 14px;
     top: -1px;
 }
 
@@ -125,9 +125,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
-    .top-header .pull-right {
-        float: none !important;
-    }
 
     .top-header .container .row > div {
         text-align: center;
@@ -147,11 +144,18 @@ a:hover {
     box-shadow: 0px 1px 0px 0px #d6d6d6;
 
 }
-
+.top-menu .row {
+    position: relative;
+}
 .top-menu div {
     height: 85px;
 }
-
+.box-inline-block {
+    position: relative;
+}
+.box-inline-block h2{
+    text-align: center;
+}
 .box-inline-block > div {
     display: inline-block;
 }
@@ -162,8 +166,8 @@ a:hover {
 
 .top-menu .logo,#footer .logo {
     background: url('../img/common/logo.png') no-repeat center;
-    width: 37px;
-    height: 36px;
+    width: 49px;
+    height: 48px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -204,11 +208,11 @@ a:hover {
     width: 246px;
     height: 42px;
 }
-
-.top-menu .box-inline-block {
-    border-right: 1px solid #d5d5d5
+.client-event {
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
-
 .client-event a {
     display: inline-block;
     padding: 10px;
@@ -228,7 +232,8 @@ a:hover {
     color: #fff;
     position: relative;
     text-align: left;
-    padding-left: 15px;
+    padding-left: 25px;
+    float: right;
 }
 
 .client-event a.cart .number-order {
@@ -321,7 +326,7 @@ a:hover {
     left: 0;
     z-index: 1;
 }
-.nav-step li:last-child:before {
+.nav-step li.done:nth-child(2) + li:before {
     content: '';
     width: 100%;
     height: 2px;
@@ -582,7 +587,6 @@ a.blue {
     padding-left: 31px;
 }
 .checkbox .checkbox-custom{
-    background-color: #4990e2;
     display: block;
     position: absolute;
     border: 1px solid #4990e2;
@@ -623,15 +627,28 @@ a.blue {
     font-size: 14px;
 }
 #footer .copyright {
-    height: 36px;
+    height: 70px;
     background-color: #ececec;
     box-shadow: 0px -1px 0px 0px #d6d6d6;
     text-align: center;
     padding: 8px 0;
 }
 #footer .container {
-    height: 185px;
-    padding: 23px 0;
+    height: 80px;
+    padding: 23px 0 21px;
+}
+#footer .container .list-menu {
+     margin: 0 21%;
+}
+#footer .container .list-menu ul{
+    padding: 0;
+}
+#footer .container .list-menu li{
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px;
+    font-weight: bold;
 }
 .list-address li, .list-menu li {
     margin-bottom: 9px;
@@ -668,6 +685,9 @@ a.blue {
     color: #f58e0b;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    #footer .container .list-menu {
+        margin: 0px;
+    }
     .box-inline-block {
         border: 0 !important;
     }
@@ -703,10 +723,6 @@ a.blue {
     }
     #footer .container {
         height: auto;
-    }
-    #footer .logo {
-        width: 50%;
-        margin: 20px 25%;
     }
     .item-form.submit {
         padding: 20px 20px;
@@ -748,6 +764,9 @@ a.blue {
 }
 
 @media only screen and (max-width: 767px) {
+    #footer .container .list-menu {
+        margin: 0px 6%;
+    }
     .box-inline-block {
         border: 0 !important;
     }
@@ -787,10 +806,7 @@ a.blue {
     }
     #footer .container {
         height: auto;
-    }
-    #footer .logo {
-        width: 50%;
-        margin: 20px 25%;
+        padding-bottom: 0px;
     }
     .item-form.submit {
         padding: 20px 20px;
@@ -845,38 +861,18 @@ a.blue {
     .style-check-radio .radio:last-child {
         padding-bottom: 0;
     }
-
-
-
-
     .client-event a {
-        width: 30px;
-        height: 30px;
+        padding: 7px;
+        width: 91px;
+        margin-top: 8px;
+        height: 32px;
     }
     .client-event a.cart {
-        color: #fff;
-        position: relative;
-        text-align: left;
-        margin-top: 0;
-        padding: 3px 9px;
+        padding-left: 13px;
     }
 
-    .client-event a.cart .number-order {
-        position: absolute;
-        width: 30px;
-        height: 14px;
-        background-color: #839DFF;
-        border-radius: 6px 6px 0 0;
-        color: #fff;
-        top: 0px;
-        right: 0px;
-        display: inline-block;
-        text-align: center;
-        font-size: 13px;
-    }
-    .icon-cart {
-        top: 6px;
-        left: -2px;
+    .top-menu div {
+        height: 48px;
     }
     .container ul {
         -webkit-padding-start: 0;
@@ -911,6 +907,9 @@ a.blue {
     }
     .step-3 .content {
         padding: 0 5%;
+    }
+    .menu-bar {
+        margin-top: 16px;
     }
 }
 
